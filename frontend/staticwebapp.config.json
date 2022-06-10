@@ -1,26 +1,18 @@
+//staticwebapp.config.json
 {
-    "routes": [
-        {
-            "route": "/admin/*",
-            "allowedRoles": [ "admin" ]
-        },
-        {
-            "route": "/authenticated/*",
-            "allowedRoles": [ "authenticated" ]
-        }
-    ],
-    "auth": {
-    "identityProviders": {
-      "azureActiveDirectory": {
-        "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/15ebd2eb-b8cf-40dd-8e2b-b2e67abb40ef/v2.0",
-          "clientIdSettingName": "AZURE_CLIENT_ID",
-          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
-        }
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+  "auth": {
+      "identityProviders": {
+          "azureActiveDirectory": {
+              "registration": {
+                  "openIdIssuer": "https://login.microsoftonline.com/15ebd2eb-b8cf-40dd-8e2b-b2e67abb40ef",
+                  "clientIdSettingName": "AZURE_CLIENT_ID",
+                  "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+              }
+          }
       }
-    }
   },
-    "globalHeaders": {
-        "Cache-Control": "no-cache"
-  }
+  "routes": [
+    
+  ]
 }
