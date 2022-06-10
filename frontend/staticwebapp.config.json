@@ -10,24 +10,17 @@
         }
     ],
     "auth": {
-        "rolesSource": "/api/GetRoles",
-        "identityProviders": {
-            "azureActiveDirectory": {
-                "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-                "registration": {
-                    "openIdIssuer": "https://login.microsoftonline.com/15ebd2eb-b8cf-40dd-8e2b-b2e67abb40ef",
-                    "clientIdSettingName": "AAD_CLIENT_ID",
-                    "clientSecretSettingName": "AAD_CLIENT_SECRET"
-                },
-                "login": {
-                    "loginParameters": [
-                        "resource=https://graph.microsoft.com"
-                    ]
-                }
-            }
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/15ebd2eb-b8cf-40dd-8e2b-b2e67abb40ef/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
         }
-    },
+      }
+    }
+  },
     "globalHeaders": {
         "Cache-Control": "no-cache"
-    }
+  }
 }
